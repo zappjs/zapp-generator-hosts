@@ -1,0 +1,13 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+{{#if hosts}}
+
+{{#each hosts}}
+{{{this}}}{{{repeat ' ' (subtract 16 (length this))}}}{{{@key}}}
+{{/each}}
+{{/if}}
+::1             localhost
